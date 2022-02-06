@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update
-RUN apt-get -y install build-essential gcc-8 g++-8 cpp-8 git bash vim curl wget cmake autoconf automake libtool meson ninja gdb
+RUN export DEBIAN_FRONTEND=noninteractive && apt-get -yq install build-essential gcc-8 g++-8 cpp-8 git bash vim curl wget cmake autoconf automake libtool meson ninja-build gdb
 
 # make gcc 8 the default as results in better optimized code
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7 --slave /usr/bin/cpp cpp-bin /usr/bin/cpp-7

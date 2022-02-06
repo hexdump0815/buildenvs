@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ "$(uname -m)" = "armv7l" ]; then
-  DOCKERFILE="Dockerfile.arm"
+  DOCKERFILE="Dockerfile.armv7l"
 elif [ "$(uname -m)" = "aarch64" ]; then
-  DOCKERFILE="Dockerfile.arm"
+  DOCKERFILE="Dockerfile.aarch64"
 elif [ "$(uname -m)" = "x86_64" ]; then
   DOCKERFILE="Dockerfile.x86_64"
 else
@@ -13,5 +13,5 @@ else
   exit 1
 fi
 
-cd docker-archlinuxarmv
-docker build --no-cache -t buildenv-archlinuxarm -f $(DOCKERFILE) .
+cd docker-archlinuxarm
+docker build --no-cache -t buildenv-archlinuxarm -f ${DOCKERFILE} .

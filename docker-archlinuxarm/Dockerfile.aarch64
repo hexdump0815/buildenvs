@@ -1,0 +1,7 @@
+FROM lopsided/archlinux-arm64v8:latest
+
+# based on: https://github.com/lopsided98/archlinux-docker
+# alternative: https://github.com/agners/archlinuxarm-docker
+
+RUN pacman --noconfirm -Syu
+RUN pacman --noconfirm -S base-devel git bash vim curl wget cmake autoconf automake libtool meson ninja gdb

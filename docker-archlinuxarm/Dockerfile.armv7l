@@ -1,4 +1,4 @@
-FROM lopsided/archlinux:latest
+FROM lopsided/archlinux-arm32v7:latest
 
 # based on: https://github.com/lopsided98/archlinux-docker
 # alternative: https://github.com/agners/archlinuxarm-docker
