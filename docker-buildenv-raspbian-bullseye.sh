@@ -3,6 +3,9 @@
 WORKDIR=`dirname $0`
 cd $WORKDIR
 
+# debootstrap is required for the following to work, so lets install it
+export DEBIAN_FRONTEND=noninteractive && apt-get -yq install debootstrap
+
 if [ "$(uname -m)" = "armv7l" ]; then
   BOOTSTRAP_ARCH="armhf"
 elif [ "$(uname -m)" = "aarch64" ]; then
