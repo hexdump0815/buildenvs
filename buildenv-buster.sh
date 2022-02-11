@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -ti -v `pwd`/compile:/compile buildenv-buster bash
+docker run -ti -v /compile:/compile buildenv-buster bash
